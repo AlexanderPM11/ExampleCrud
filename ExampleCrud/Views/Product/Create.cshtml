@@ -1,0 +1,39 @@
+﻿@using ExampleCrud.Models
+@model Product
+
+@{
+    ViewData["Title"] = "Create Product";
+}
+
+<div class="text-center">
+    
+    <div class="card" style="">
+
+      <div class="card-body">
+        <h5 class="card-title">Crear Nuevo Producto</h5>
+                <form method="post" asp-action="Create" asp-controller="Product">
+
+
+                    <div class="mb-3">
+
+                        <div class="col">
+                            <label asp-for="Name" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" asp-for="Name">
+                        </div>
+
+                        <div class="col">
+                            <label asp-for="Price" class="form-label">Precio</label>
+                            <input type="text" class="form-control" asp-for="Price">
+                        </div>
+
+                    </div>              
+
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+
+                </form>
+      </div>
+
+    </div>
+    
+    
+</div>
